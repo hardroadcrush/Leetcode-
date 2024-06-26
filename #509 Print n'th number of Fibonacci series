@@ -1,0 +1,18 @@
+// C code that takes input 'n' from user and prints the n'th number of the Fibonacci series
+//Leecode #509
+#include <stdio.h>
+int fib(int m){
+   
+    if(m<2)
+    return m;
+    else
+    return(fib(m-1)+fib(m-2));
+}
+int main(){
+    printf("Which place of the Fibonacci series number would you like to calculate? \t");
+    int n;
+    scanf("%d",&n);
+   int ans=fib(n-1);
+    printf("\n %d",ans);
+    return 0;
+}
