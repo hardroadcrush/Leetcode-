@@ -1,0 +1,13 @@
+// #12 Convert integer to Roman numerals
+
+char* intToRoman(int num) {
+
+ 
+char units[][]= {"","I","II","III","IV","V","VI","VII","VIII","IX"};
+char tens[][]=  {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
+char huns[][]=  {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
+char thous[][]= {"","M","MM","MMM"};
+
+return thous[num/1000]+huns[(num/100)%10]+tens[(num%100)/10]+units[num%10];
+
+}
